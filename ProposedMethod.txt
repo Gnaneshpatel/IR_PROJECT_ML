@@ -1,0 +1,26 @@
+
+
+
+
+The Proposed Method:
+
+A movie recommendation system will need data on movies and details like titles, genre, actors, etc. We will use a dataset for this. 
+
+The next step will be to preprocess our data by categorizing the subcategories, like the genre, so that they become easier to work with. 
+For example, we initially had a list of dictionaries for each movie representing the genres it fell under, like {"id": 28, "name": "Action"}, but after preprocessing, we have a list of genres without the id number like [Action, Adventure, Fantasy, Science Fiction].
+A similar step is followed for all the columns in our dataset, like genres, keywords, cast, etc.
+
+Then we perform feature extraction by extracting the genre, cast, director name, and useful features from the overview of the movie. 
+We do this by making a single column, “tags,” combining all other columns except the title and movie_id, and then we perform stemming on this column. 
+Stemming will reduce the input size and complexity. This will help access the movies easier and faster. We then perform the vectorization of movies and find similarities between movies using the cosine similarity.
+This last step helps us to find movies similar to each other.
+
+We will then analyze user data to build the user profiles using users’ preferences and past viewing habits. 
+This will be done by behavior data analysis. We will then use hybrid filtering, combining collaborative and content-based filtering to provide accurate recommendations. 
+We will use collaborative filtering based on item-to-item similarity. We will use content based filtering based on the features extracted from the overview of the movies and their reviews. 
+Content-based filtering will help us recommend movies solely based on a user’s preferences and movie details. We will use content-based filtering to provide recommendations based on the user's mood. 
+This will be done by mapping different features extracted above with different moods of the user.
+
+After completing the above processes, we will evaluate the performance of our movie recommendation system using metrics like accuracy, coverage, and diversity.
+We also plan to explain the recommendation to the user to ensure transparency.
+
